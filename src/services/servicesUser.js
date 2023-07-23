@@ -1,8 +1,17 @@
+class error404 extends Error {
+  constructor(message) {
+    super(message);
+    this.name = "error404";
+  }
+}
+
 const getUser = (user) => {
   return fetch("https://api.github.com/users/" + user)
-    .then((response) => response.json())
+    .then((response) => {
+        if(response.status === 404) {throw new error404("Usuario no encontrado")}
+        return response.json()})
     .then((data) => data)
-    .catch((error) => console.log(error));
+    
 };
 
 export default { getUser };
