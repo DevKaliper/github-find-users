@@ -3,6 +3,7 @@ import FindUser from "./components/FindUser";
 import Header from "./components/Header";
 import ShowUser from "./components/ShowUser";
 import service from "./services/servicesUser";
+import { Footer } from "./components/Footer";
 
 function App() {
   const [user, setUser] = useState("");
@@ -38,6 +39,7 @@ function App() {
           No User to search...
         </h1>
       )}
+      <Footer />
     </>
   );
 }
