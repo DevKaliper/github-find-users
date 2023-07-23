@@ -1,6 +1,6 @@
 const Header = () => {
     return (
-        <div className="navbar gap-10 px-32 bg-[#988E6F]">
+        <div className="navbar glass gap-10 px-32 bg-[#655E4A]">
   <div className="flex-1  btn btn-ghost normal-case text-xl relative ">
     <a className="invisible md:visible">Intergrated with </a>
     <img src="./src/img/GitHub_Logo_White.png"  className="absolute md:relative" alt="github" width={150} />
